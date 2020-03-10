@@ -1,1 +1,10 @@
 # helloworld
+npm install @openapitools/openapi-generator-cli -g
+
+npm install @openapitools/openapi-generator-cli@cli-4.2.3 -g
+npx openapi-generator generate -i petstore.yaml -g ruby -o /tmp/test/
+docker run --rm \
+  -v ${PWD}:/local openapitools/openapi-generator-cli generate \
+  -i /local/petstore.yaml \
+  -g go \
+  -o /local/out/go
